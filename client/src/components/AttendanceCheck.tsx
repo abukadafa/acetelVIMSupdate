@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import api from '../lib/api';
 import { getCurrentPosition, formatDistance } from '../lib/geolocation';
@@ -71,7 +71,7 @@ export default function AttendanceCheck({ onComplete }: { onComplete: () => void
             <div style={{ display: 'flex', gap: '12px', fontSize: '0.85rem', color: 'var(--text-2)' }}>
               <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}><Clock size={14} /> {new Date(lastCheckIn.check_in_time).toLocaleTimeString()}</span>
               {lastCheckIn.distance_from_company && (
-                <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}><MapPin size={14} /> At {student?.company_name} ({formatDistance(lastCheckIn.distance_from_company)})</span>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}><MapPin size={14} /> At {student?.company?.name} ({formatDistance(lastCheckIn.distance_from_company)})</span>
               )}
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function AttendanceCheck({ onComplete }: { onComplete: () => void
       
       <div style={{ textAlign: 'center', padding: '10px 0' }}>
         <div style={{ color: 'var(--text-2)', fontSize: '0.9rem', marginBottom: '20px' }}>
-          Please ensure you are at your assigned workplace (<strong>{student?.company_name}</strong>) before checking in.
+          Please ensure you are at your assigned workplace (<strong>{student?.company?.name}</strong>) before checking in.
         </div>
 
         {locationError && (

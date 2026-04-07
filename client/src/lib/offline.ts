@@ -11,8 +11,7 @@ export interface OfflineLogbookEntry {
   retryCount?: number;
 }
 
-const LOGBOOK_KEY = 'ims_offline_logbook';
-const ATTENDANCE_KEY = 'ims_offline_attendance';
+const LOGBOOK_KEY = 'acetel_offline_logbooks';
 
 // ─── Logbook ──────────────────────────────────────────────
 export function saveLogbookOffline(entry: Omit<OfflineLogbookEntry, 'timestamp'>): void {

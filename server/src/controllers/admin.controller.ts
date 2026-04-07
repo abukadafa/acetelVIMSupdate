@@ -1,4 +1,5 @@
 import { Response } from 'express';
+import mongoose from 'mongoose';
 import User from '../models/User.model';
 import Programme from '../models/Programme.model';
 import Tenant from '../models/Tenant.model';
@@ -785,7 +786,7 @@ export async function bulkOnboard(req: AuthRequest, res: Response): Promise<void
       
       // Programme Isolation for non-admins
       if (req.user!.role !== 'admin') {
-        programmeId = req.user!.programme;
+        programmeId = req.user!.programme as any;
       }
 
       // Final Role Assignment

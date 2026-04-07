@@ -103,7 +103,7 @@ export default function Dashboard() {
       {/* Admin / Institutional View */}
       {(isRole('admin')) && (
         <>
-          <AnalyticsDashboard key={`analytics-${refresh}`} visibleRoles={visibleRoles} />
+          <AnalyticsDashboard key={`analytics-${refresh}`} />
           <div className="grid-2" style={{ marginTop: '28px' }}>
             <MapDashboard />
             

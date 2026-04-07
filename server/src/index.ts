@@ -7,7 +7,7 @@ import { rateLimit } from 'express-rate-limit';
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
-import { initDatabase } from './models/database';
+import { initDatabase } from './models/Database';
 import authRoutes from './routes/auth.routes';
 import studentRoutes from './routes/student.routes';
 import logbookRoutes from './routes/logbook.routes';

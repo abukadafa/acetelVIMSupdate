@@ -4,7 +4,7 @@ import User from '../models/User.model';
 import Student from '../models/Student.model';
 import Logbook from '../models/Logbook.model';
 import Assessment from '../models/Assessment.model';
-import Notification from '../models/notification.model';
+import Notification from '../models/Notification.model';
 import { io } from '../index';
 import bcrypt from 'bcryptjs';
 

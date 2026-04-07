@@ -3,7 +3,7 @@ import { AuthRequest } from '../middleware/auth.middleware';
 import Logbook from '../models/Logbook.model';
 import Student from '../models/Student.model';
 import User from '../models/User.model';
-import Notification from '../models/notification.model';
+import Notification from '../models/Notification.model';
 import { io } from '../index';
 
 export async function getLogbookEntries(req: AuthRequest, res: Response): Promise<void> {

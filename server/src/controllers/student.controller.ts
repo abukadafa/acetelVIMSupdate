@@ -4,7 +4,7 @@ import Student from '../models/Student.model';
 import User from '../models/User.model';
 import Programme from '../models/Programme.model';
 import Logbook from '../models/Logbook.model';
-import NotificationModel from '../models/notification.model';
+import NotificationModel from '../models/Notification.model';
 import { autoAllocateStudent } from '../utils/allocation.service';
 
 export async function getAllStudents(req: AuthRequest, res: Response): Promise<void> {

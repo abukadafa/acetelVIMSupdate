@@ -1,7 +1,7 @@
 import Student from '../models/Student.model';
 import Company from '../models/Company.model';
 import User from '../models/User.model';
-import NotificationModel from '../models/notification.model';
+import NotificationModel from '../models/Notification.model';
 import { calculateDistance } from './geo.utils';
 import { sendEmail } from './mail.service';
 import { sendWhatsAppMessage, whatsappTemplates } from './whatsapp.service';

@@ -1,5 +1,5 @@
 import { Response } from 'express';
-import mongoose from 'mongoose';
+import mongoose, { Types } from 'mongoose';
 import User from '../models/User.model';
 import Programme from '../models/Programme.model';
 import Tenant from '../models/Tenant.model';
@@ -709,7 +709,7 @@ export async function bulkOnboard(req: AuthRequest, res: Response): Promise<void
     const progMap = allProgs.reduce((acc, p) => {
       acc[p.code.toLowerCase()] = p._id;
       return acc;
-    }, {} as Record<string, mongoose.Types.ObjectId>);
+    }, {} as Record<string, Types.ObjectId>);
 
     // PARTNER COMPANY BRANCH
     if (type === 'company') {

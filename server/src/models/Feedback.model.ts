@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, Types } from 'mongoose';
 
 export interface IFeedbackResponse {
   user: any;
@@ -7,14 +7,14 @@ export interface IFeedbackResponse {
 }
 
 export interface IFeedback extends Document {
-  user: mongoose.Types.ObjectId;
+  user: Types.ObjectId;
   subject: string;
   category: 'Logbook' | 'Placement' | 'Technical' | 'Support' | 'Academic';
   message: string;
   status: 'Open' | 'Assigned' | 'Closed';
   responses: IFeedbackResponse[];
-  assignedTo?: mongoose.Types.ObjectId;
-  programme?: mongoose.Types.ObjectId;
+  assignedTo?: Types.ObjectId;
+  programme?: Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
 }

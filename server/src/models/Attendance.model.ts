@@ -1,7 +1,7 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, Types } from 'mongoose';
 
 export interface IAttendance extends Document {
-  student: mongoose.Types.ObjectId;
+  student: Types.ObjectId;
   checkInTime: Date;
   checkOutTime?: Date;
   lat?: number;

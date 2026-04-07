@@ -1,11 +1,11 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, Types } from 'mongoose';
 
 export interface IAuditLog extends Document {
-  user?: mongoose.Types.ObjectId;
+  user?: Types.ObjectId;
   action: string;
   module: string;
   details: string;
-  targetId?: mongoose.Types.ObjectId;
+  targetId?: Types.ObjectId;
   reason?: string;
   ipAddress?: string;
   createdAt: Date;

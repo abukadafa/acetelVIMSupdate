@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, Types } from 'mongoose';
 import bcrypt from 'bcryptjs';
 
 export interface IUser extends Document {
@@ -10,12 +10,12 @@ export interface IUser extends Document {
   lastName: string;
   phone?: string;
   avatar?: string;
-  programme?: mongoose.Types.ObjectId; // For per-programme staff roles
-  tenant: mongoose.Types.ObjectId;
+  programme?: Types.ObjectId; // For per-programme staff roles
+  tenant: Types.ObjectId;
   isActive: boolean;
   isDeleted: boolean;
   deletedAt?: Date;
-  deletedBy?: mongoose.Types.ObjectId;
+  deletedBy?: Types.ObjectId;
   deleteReason?: string;
   lastEditReason?: string;
   lastLogin?: Date;

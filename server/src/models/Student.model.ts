@@ -1,12 +1,12 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, Types } from 'mongoose';
 
 export interface IStudent extends Document {
-  user: mongoose.Types.ObjectId;
-  tenant: mongoose.Types.ObjectId;
+  user: Types.ObjectId;
+  tenant: Types.ObjectId;
   matricNumber: string;
-  programme: mongoose.Types.ObjectId;
-  company?: mongoose.Types.ObjectId;
-  supervisor?: mongoose.Types.ObjectId;
+  programme: Types.ObjectId;
+  company?: Types.ObjectId;
+  supervisor?: Types.ObjectId;
   academicSession: string;
   level: string;
   personalEmail?: string;
@@ -26,7 +26,7 @@ export interface IStudent extends Document {
   overallScore: number;
   isDeleted: boolean;
   deletedAt?: Date;
-  deletedBy?: mongoose.Types.ObjectId;
+  deletedBy?: Types.ObjectId;
   deleteReason?: string;
   lastEditReason?: string;
 }

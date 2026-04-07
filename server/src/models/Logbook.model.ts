@@ -1,8 +1,8 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, Types } from 'mongoose';
 
 export interface ILogbookEntry extends Document {
-  student: mongoose.Types.ObjectId;
-  tenant: mongoose.Types.ObjectId;
+  student: Types.ObjectId;
+  tenant: Types.ObjectId;
   entryDate: Date;
   weekNumber: number;
   activities: string;

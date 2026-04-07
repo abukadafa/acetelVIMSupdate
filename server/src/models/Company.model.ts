@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, Types } from 'mongoose';
 
 export interface ICompany extends Document {
   name: string;
@@ -17,7 +17,7 @@ export interface ICompany extends Document {
   isApproved: boolean;
   isDeleted: boolean;
   deletedAt?: Date;
-  deletedBy?: mongoose.Types.ObjectId;
+  deletedBy?: Types.ObjectId;
   deleteReason?: string;
 }
 

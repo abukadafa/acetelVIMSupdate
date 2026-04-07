@@ -1,8 +1,8 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, Types } from 'mongoose';
 
 export interface IAssessment extends Document {
-  student: mongoose.Types.ObjectId;
-  supervisor: mongoose.Types.ObjectId;
+  student: Types.ObjectId;
+  supervisor: Types.ObjectId;
   type: 'mid_term' | 'final' | 'monthly';
   period: string;
   punctuality: number;

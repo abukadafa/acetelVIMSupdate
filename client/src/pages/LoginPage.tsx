@@ -27,9 +27,6 @@ export default function LoginPage() {
 
   return (
     <div className="login-page fade-in">
-      <div className="login-left">
-      </div>
-
       <div className="login-right">
         <div style={{ width: '100%', maxWidth: '380px' }}>
           <div style={{ textAlign: 'center', marginBottom: '32px' }}>
